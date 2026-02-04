@@ -1,0 +1,49 @@
+# Darshan's Portfolio
+
+[![Site preview](/public/site-preview.png)](https://darshan-deep.github.io/Darshan_portfolio)
+
+Darshan's design portfolio to showcase a few projects. Built with [Remix](https://remix.run/), [Three.js](https://threejs.org/), and [Framer Motion](https://www.framer.com/motion/). View the [live site](https://darshan-deep.github.io/Darshan_portfolio) or run the components storybook locally with `npm run dev:storybook`.
+
+## Install & run
+
+Make sure you have nodejs `19.9.0` or higher and npm `9.6.3` or higher installed. Install dependencies with:
+
+```bash
+npm install
+```
+
+Once it's done start up a local server with:
+
+```bash
+npm run dev
+```
+
+To view the components storybook:
+
+```bash
+npm run dev:storybook
+```
+
+## Deployment
+
+The site can be deployed to Vercel or GitHub Pages. For Vercel, push to a GitHub repository connected to Vercel. For GitHub Pages, use the `gh-pages` package or manual deployment.
+
+## Permissions
+
+I'm cool with anyone using the code or parts of the code for their own site, it is open source so people can learn from it and adapt it. However, I would encourage you to modify the theme and components to make it your own. If you are using the site's design largely unmodified, I'd appreciate being credited as the original designer.
+
+I do not give permission to present any of my projects as your own (this is being actively used as my portfolio site and these are my real projects I've worked on).
+
+## FAQs
+
+<details>
+  <summary>How do I change the color on the <code>DisplacementSphere</code> (blobby rotating thing in the background).</summary>
+  
+  You'll need to edit the fragment shader. Check the code for details.
+</details>
+
+<details>
+  <summary>How do I get the contact form to work?</summary>
+  
+  To get the contact form working create an AWS account and set up SES (Simple Email service). Then plug in your details into `.dev.vars.example` and rename it to `.dev.vars`. You'll also need to add these as environment variables in the deployment platform.
+</details>

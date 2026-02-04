@@ -1,8 +1,8 @@
 {
   "name": "portfolio",
-  "homepage": "https://hamishw.com",
+  "homepage": "https://darshan-deep.github.io/Darshan_portfolio",
   "description": "Portfolio site for Dip Darshan Thapa",
-  "repository": "https://github.com/HamishMW/portfolio.git",
+  "repository": "https://github.com/Darshan-deep/Darshan_portfolio.git",
   "author": "Dip Darshan Thapa",
   "sideEffects": false,
   "type": "module",
