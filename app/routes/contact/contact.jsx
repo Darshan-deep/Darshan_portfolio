@@ -34,8 +34,8 @@ export async function action({ context, request }) {
   const ses = new SESClient({
     region: 'us-east-1',
     credentials: {
-      accessKeyId: context.cloudflare.env.AWS_ACCESS_KEY_ID,
-      secretAccessKey: context.cloudflare.env.AWS_SECRET_ACCESS_KEY,
+      accessKeyId: context.cloudflare?.env?.AWS_ACCESS_KEY_ID || process.env.AWS_ACCESS_KEY_ID,
+      secretAccessKey: context.cloudflare?.env?.AWS_SECRET_ACCESS_KEY || process.env.AWS_SECRET_ACCESS_KEY,
     },
   });
 
@@ -73,7 +73,7 @@ export async function action({ context, request }) {
   await ses.send(
     new SendEmailCommand({
       Destination: {
-        ToAddresses: [context.cloudflare.env.EMAIL],
+        ToAddresses: [context.cloudflare?.env?.EMAIL || process.env.EMAIL || 'dev@example.com'],
       },
       Message: {
         Body: {
@@ -85,7 +85,7 @@ export async function action({ context, request }) {
           Data: `Portfolio message from ${email}`,
         },
       },
-      Source: `Portfolio <${context.cloudflare.env.FROM_EMAIL}>`,
+      Source: `Portfolio <${context.cloudflare?.env?.FROM_EMAIL || process.env.FROM_EMAIL || 'dev@example.com'}>`,
       ReplyToAddresses: [email],
     })
   );
