@@ -1,0 +1,7 @@
+{
+  "buildCommand": "remix vite:build",
+  "outputDirectory": "build/client",
+  "framework": "remix",
+  "installCommand": "npm install",
+  "devCommand": "remix vite:dev"
+}

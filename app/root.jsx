@@ -59,7 +59,7 @@ export const loader = async ({ request, context }) => {
       maxAge: 604_800,
       path: '/',
       sameSite: 'lax',
-      secrets: [context.cloudflare?.env?.SESSION_SECRET || 'dev-secret-key'],
+      secrets: [process.env.SESSION_SECRET || 'dev-secret-key'],
       secure: process.env.NODE_ENV === 'production',
     },
   });
